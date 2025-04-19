@@ -58,3 +58,27 @@ const nameAndProvince = names.reduce((acc, name, index) => {
   return acc;
 }, {});
 console.log(nameAndProvince);
+// -----------------------------------------------------------
+
+
+//ADVANCED SINGLE CONSOLE.LOG EXECUTION
+
+// Logs each product in the 'products' array to the console using forEach method
+console.log(products.forEach(p => console.log(p.product)));
+
+// Logs products whose length is less than or equal to 5
+console.log(products.filter(p => p.product.length <= 5));
+
+// Filters out products with valid numeric prices
+console.log(products.filter(p => !isNaN(parseFloat(p.price))).reduce((sum, p) => sum + parseFloat(p.price), 0));
+
+// Concatenates all products array into a single string
+console.log(products.reduce((acc, p) => acc + p.product, ''));
+
+/* Logs a function (not its result) that filters out products with invalid prices, parses prices to floats,
+console.log(() => {
+  const priced = products.filter(p => !isNaN(parseFloat(p.price))).map(p => ({...p, price: parseFloat(p.price)}));
+}); */
+
+// Logs a new array of objects where each product is transformed to have 'name' and 'cost'
+console.log(products.map(p => Object.entries({ name: p.product, cost: p.price }).reduce((acc, [k, v]) => ({ ...acc, [k]: v }), {})));
