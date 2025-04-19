@@ -41,3 +41,7 @@ console.log(nameLengths); // Outputs: [6, 9, 11, 5, 7, 7]
 // SORTS THE PROVINCES ALPHABETICALLY
 provinces.sort()
 console.log(provinces);
+
+// FILTERS PROVINCE THAT DON'T CONTAIN "Cape"
+const filteredProvinces = provinces.filter(province => !province.includes("Cape"));
+console.log(filteredProvinces.length);
