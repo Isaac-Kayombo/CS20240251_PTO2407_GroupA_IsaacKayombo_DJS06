@@ -37,3 +37,7 @@ console.log(provincesInUpperCase);
 
 const nameLengths = names.map(name => name.length);
 console.log(nameLengths); // Outputs: [6, 9, 11, 5, 7, 7]
+
+// SORTS THE PROVINCES ALPHABETICALLY
+provinces.sort()
+console.log(provinces);
