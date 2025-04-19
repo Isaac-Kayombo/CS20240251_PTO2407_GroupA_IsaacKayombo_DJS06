@@ -45,3 +45,15 @@ console.log(provinces);
 // FILTERS PROVINCE THAT DON'T CONTAIN "Cape"
 const filteredProvinces = provinces.filter(province => !province.includes("Cape"));
 console.log(filteredProvinces.length);
+
+// NAMES THAT CONTAIN THE LETTER "S"
+const sLetterInName = names.map(name => 
+  name.includes('S')
+);
+console.log(sLetterInName);
+
+// CREATING A OBJECT WITH BOTH NAMES AND PROVINCES
+const nameAndProvince = names.reduce((acc, name, index) => {
+  acc[name] = provinces[index];
+  return acc;
+}, {});
