@@ -29,3 +29,11 @@ names.forEach((name, index) => {
   console.log(`${name} (${provinces[index]})`);
 });
 // ---------------------------------------------------------
+
+// USING MAP METHOD TO CREATE UPPERCASE ARRAY OF PROVINCES AND ARRAY OF THE LENGTH OF EACH NAME
+
+const provincesInUpperCase = provinces.map(province => province.toUpperCase());
+console.log(provincesInUpperCase);
+
+const nameLengths = names.map(name => name.length);
+console.log(nameLengths); // Outputs: [6, 9, 11, 5, 7, 7]
