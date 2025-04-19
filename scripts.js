@@ -57,3 +57,4 @@ const nameAndProvince = names.reduce((acc, name, index) => {
   acc[name] = provinces[index];
   return acc;
 }, {});
+console.log(nameAndProvince);
