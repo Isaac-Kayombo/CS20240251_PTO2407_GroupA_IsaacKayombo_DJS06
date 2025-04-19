@@ -13,3 +13,19 @@ const products = [
   { product: 'coffee', price: 10 },
   { product: 'tea', price: '' },
 ]
+// ---------------------------------------------------------
+
+// USING forEach METHOD TO LOG NAMES AND PROVINCES
+
+names.forEach((name) => {
+  console.log(name);
+});
+
+provinces.forEach((province) => {
+  console.log(province);
+});
+
+names.forEach((name, index) => {
+  console.log(`${name} (${provinces[index]})`);
+});
+// ---------------------------------------------------------
